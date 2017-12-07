@@ -1,0 +1,24 @@
+<div class="alert alert-success" role="alert">
+  <h4 class="alert-heading">{{ttl.toUpperCase()}}</h4>
+  <p>{{msg}}</p>
+  <p class="mb-0">visit <a href="http://codekul.com">codekul.com Rs.{{100*5}} {{ttl ? 'Its valid' : 'Not valid'}}</a> </p>
+  <p>
+    <input type="{{typ}}" >
+  </p>
+  <p>
+    <input [type]="typ" >
+  </p>
+  <p>
+    <input [style.border]="'1px solid red'" >
+  </p>
+</div>
+
+<div class="alert" [class.alert-info]="isAl" role="alert">
+  <h4 [class.alert-heading]="true">{{ttl.toUpperCase()}}</h4>
+</div>
+<div>
+  <input type="button" value="Okay" (click)="onBtnClick()" class="btn btn-info">
+</div>
+<div>
+  <input type="text" value="Okay" [(ngModel)]="ttl">
+</div>

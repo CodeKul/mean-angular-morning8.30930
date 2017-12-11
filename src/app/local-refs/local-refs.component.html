@@ -1,0 +1,20 @@
+
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" placeholder="User Name" #usNm>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <input
+      type="button"
+      value="Okay"
+      class="btn btn-primary"
+      (click)="myNm = usNm.value">
+  </div>
+</div>
+<div class="jumbotron">
+  <div class="col-md-12">
+    <h3>{{myNm}}</h3>
+  </div>
+</div>

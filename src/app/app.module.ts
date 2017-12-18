@@ -1,3 +1,5 @@
+import { MobileService } from './service/mobile.service';
+import { IotService } from './service/iot.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'
@@ -11,6 +13,11 @@ import { MyToolTipComponent } from './my-tool-tip/my-tool-tip.component';
 import { InterCompComComponent } from './inter-comp-com/inter-comp-com.component';
 import { OneComponent } from './inter-comp-com/one.component';
 import { TwoComponent } from './inter-comp-com/two.component';
+import { ServiceComponent } from './service/service.component';
+import { MobOneComponent } from './service/mob-one.component';
+import { MobTwoComponent } from './service/mob-two.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { SimpleHoverDirective } from './directives/simple-hover.directive';
 
 
 @NgModule({
@@ -22,13 +29,21 @@ import { TwoComponent } from './inter-comp-com/two.component';
     MyToolTipComponent,
     InterCompComComponent,
     OneComponent,
-    TwoComponent
+    TwoComponent,
+    ServiceComponent,
+    MobOneComponent,
+    MobTwoComponent,
+    DirectivesComponent,
+    SimpleHoverDirective
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    MobileService,
+    IotService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

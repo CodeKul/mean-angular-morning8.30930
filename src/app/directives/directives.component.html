@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col-md-12">
+    <div [ngStyle]="{'border':'1px solid red'}">
+      CodeKul
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div [ngStyle]="colSty">
+      CodeKul
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div [ngClass]="{'alert' : true, 'alert-success': true}">
+      CodeKul
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div
+      [class.alert]="true"
+      [class.alert-danger]="true"
+      [class.mytxt]="true">
+      CodeKul
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div [style.border]="'1px solid red'">
+      CodeKul
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div simpleHover>
+      CodeKul with directives
+    </div>
+  </div>
+</div>

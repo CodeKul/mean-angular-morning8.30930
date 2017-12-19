@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http'
 import { MobileService } from './service/mobile.service';
 import { IotService } from './service/iot.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -18,6 +19,7 @@ import { MobOneComponent } from './service/mob-one.component';
 import { MobTwoComponent } from './service/mob-two.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { SimpleHoverDirective } from './directives/simple-hover.directive';
+import { CalcComponent } from './calc/calc.component';
 
 
 @NgModule({
@@ -34,11 +36,13 @@ import { SimpleHoverDirective } from './directives/simple-hover.directive';
     MobOneComponent,
     MobTwoComponent,
     DirectivesComponent,
-    SimpleHoverDirective
+    SimpleHoverDirective,
+    CalcComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     MobileService,

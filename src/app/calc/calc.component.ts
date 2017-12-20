@@ -11,6 +11,8 @@ import { Calc } from './calc';
 })
 export class CalcComponent implements OnInit {
 
+  resMsg: string;
+
   constructor(
     private calc: CalcService
   ) { }
@@ -26,6 +28,7 @@ export class CalcComponent implements OnInit {
 
     this.calc.performOperation(clc, result => {
       console.log(result)
+      this.resMsg = `the result of ${result.msg} is ${result.res}`;
     });
   }
 }

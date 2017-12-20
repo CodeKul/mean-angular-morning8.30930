@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Calc } from './calc';
 
 @Injectable()
@@ -10,12 +10,17 @@ export class CalcService {
   ) { }
 
   performOperation(clc: Calc, onResult: (res) => void) {
+
     this.http.post(
       'http://localhost:3000/calcv2',
-      clc
+      clc, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
     ).subscribe(
-      (response: Response) => onResult(response.body),
-      err  => onResult(err),
+      (response: Response) => onResult(response),
+      err => onResult(err),
     );
   }
 }
